@@ -32,19 +32,19 @@ to make sure Docker is running. If you see errors, then launch Docker and try ag
 docker run -d -p 3000:3000 grafana/grafana
 ```
 to install the latest stable Grafana version.
-> You may need to use `sudo` in front of this command on a Linux system.
+> *You may need to use `sudo` in front of this command on a Linux system.*
 
 ## Logging in
-Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
-(image)
-Log in using **admin/admin** as your login and password. 
+  * Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
+  * Log in using **admin/admin** as your login and password.
+  * Change your password when prompted. Type in your new password twice and click **Proceed**.
 
-After that, you will be prompted to change your password. Type in your new password twice and click `Proceed`.
-## Setting up the data source
+## Data source
 After you log in, you will see the Grafana welcome screen.
-(image)
-To your left, there is a sidebar, which is the main means of navigation in Grafana. 
-(image)
+
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="400"></a>
+
+The sidebar on the left the main means of navigation in Grafana. 
   * In the Configuration menu (cog icon), click the `Add Data Source` button. 
   * Search for the `TestData DB` data source and select it. 
   * Make sure the `default` switch is on.
@@ -54,14 +54,18 @@ To your left, there is a sidebar, which is the main means of navigation in Grafa
 Click `Create a dashboard`.
 On the created dashboard, you will see a panel with two buttons.
 (image)
-### Creating a query
+### Setting up a panel
+#### Add a query
 Click the `Add query` button. This will open the query and visualization editor.
-In the `Scenario` menu, select `Streaming Client`. This will provide you with mock signal data which updates each 250 milliseconds by default.
-  * Select "Last 5 minutes" in the drop-down menu on the top right.
+(image)
+By default, you will be presented with a graph visualization of static data.
+In the `Scenario` menu, select `Streaming Client`. This will provide you with mock signal data that updates once each 250 milliseconds.
+  * The time picker menu on the top right contains the time interval displayed. 
   * The `Speed (ms)` field value indicates how often your data updates.
   (images)
-### Visualization
-Finally, click the graph icon on the left. (image)
-This will let you edit your visualization's appearance. We will be using the default `Graph` visualization in our tutorial. 
-##### Set up a readable legend
-  * Switch on the `Show`, `As Table`, `To your right`, as well as `Min` and `Max` switches in the `Legend` section.
+#### Set up visualization
+Click the graph icon on the left. (image)
+This will let you edit your visualization's appearance.
+##### A readable legend
+  * Switch on the `As Table`, `To your right`, `Min`, and `Max` switches in the **Legend** section.
+##### 

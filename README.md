@@ -32,7 +32,7 @@ to make sure Docker is running. If you see errors, then launch Docker and try ag
 docker run -d -p 3000:3000 grafana/grafana
 ```
 to install the latest stable Grafana version.
-> *You may need to use `sudo` in front of this command on a Linux system.*
+> *You may need to use* `sudo` *in front of this command on a Linux system.*
 
 ## Logging in
   * Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
@@ -45,14 +45,14 @@ After you log in, you will see the Grafana welcome screen.
 <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="400"></a>
 
 The sidebar on the left the main means of navigation in Grafana. 
-  * In the Configuration menu (cog icon), click the `Add Data Source` button. 
-  * Search for the `TestData DB` data source and select it. 
-  * Make sure the `default` switch is on.
-  * Click `Save&Test`.
+  * In the **Configuration** menu (cog icon), click the **Add Data Source** button. 
+  * Search for the **TestData DB** data source and select it. 
+  * Make sure the **Default** switch is on.
+  * Click **Save&Test**.
 
 ## Creating a dashboard
-Click `Create a dashboard`.
-On the created dashboard, you will see a panel with two buttons.
+Click **Create a dashboard**.
+You will see a panel with two buttons.
 (image)
 ### Setting up a panel
 #### Add a query
@@ -60,12 +60,13 @@ Click the `Add query` button. This will open the query and visualization editor.
 (image)
 By default, you will be presented with a graph visualization of static data.
 In the `Scenario` menu, select `Streaming Client`. This will provide you with mock signal data that updates once each 250 milliseconds.
+
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/top.png"></a>
   * The time picker menu on the top right contains the time interval displayed. 
   * The `Speed (ms)` field value indicates how often your data updates.
-  (images)
+
 #### Set up visualization
-Click the graph icon on the left. (image)
-This will let you edit your visualization's appearance.
+On the left, click the graph icon. This will let you edit your visualization's appearance.
 ##### A readable legend
   * Switch on the `As Table`, `To your right`, `Min`, and `Max` switches in the **Legend** section.
 ##### 

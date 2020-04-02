@@ -15,12 +15,13 @@ You will create your first dashboard and visualize a mock signal after installin
 * A **panel** is the basic visual element of Grafana comprised of a visualization and at least one query.  
 * A **dashboard** is a set of panels. 
 * A **data source** is a file, database, or service providing the data.
+* A **visualization** is a graphical representation of query results.
   
 
 ## Installing Grafana 
 
 Grafana comes in two flavors: Alpine Linux-based and Ubuntu-based. In this tutorial, we will be using the Alpine version, which is recommended by the developers for safety and efficiency.
-1. Open your preferred terminal and type:
+1. Open any kind of terminal and type:
 ```
 docker ps
 ```
@@ -34,24 +35,33 @@ to install the latest stable Grafana version.
 > You may need to use `sudo` in front of this command on a Linux system.
 
 ## Logging in
-Open your preferred web browser and nagivate to [localhost:3000](http://localhost:3000/). 
+Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
 (image)
-Log in using **admin/admin** as login/password. After that, you will be prompted to change your password.
+Log in using **admin/admin** as your login and password. 
+
+After that, you will be prompted to change your password. Type in your new password twice and click `Proceed`.
 ## Setting up the data source
-After you log in, you will see the Grafana welcome screen. 
-  * Click the Add Data Source button. 
+After you log in, you will see the Grafana welcome screen.
+(image)
+To your left, there is a sidebar, which is the main means of navigation in Grafana. 
+(image)
+  * In the Configuration menu (cog icon), click the `Add Data Source` button. 
   * Search for the `TestData DB` data source and select it. 
   * Make sure the `default` switch is on.
   * Click `Save&Test`.
 
 ## Creating a dashboard
 Click `Create a dashboard`.
-On the created dashboard, you will see a single panel.
+On the created dashboard, you will see a panel with two buttons.
+(image)
 ### Creating a query
 Click the `Add query` button. This will open the query and visualization editor.
 In the `Scenario` menu, select `Streaming Client`. This will provide you with mock signal data which updates each 250 milliseconds by default.
+  * Select "Last 5 minutes" in the drop-down menu on the top right.
   * The `Speed (ms)` field value indicates how often your data updates.
-  * The drop-down menu on top contains different time intervals which can be applied to your visualization.
-
+  (images)
 ### Visualization
-Finally, set up the visualization.
+Finally, click the graph icon on the left. (image)
+This will let you edit your visualization's appearance. We will be using the default `Graph` visualization in our tutorial. 
+##### Set up a readable legend
+  * Switch on the `Show`, `As Table`, `To your right`, as well as `Min` and `Max` switches in the `Legend` section.

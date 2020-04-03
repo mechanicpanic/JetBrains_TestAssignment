@@ -12,15 +12,15 @@ You will create your first dashboard and visualize bucketed heatmap data after i
   * At least 255 MB of RAM
   
 ## [Grafana building blocks](https://grafana.com/docs/grafana/latest/guides/glossary/)
-* A **panel** is the basic visual element of Grafana comprised of a visualization and at least one query.  
-* A **dashboard** is a set of panels. 
-* A **data source** is a file, database, or service providing the data.
-* A **visualization** is a graphical representation of query results.
+  * A **panel** is the basic visual element of Grafana comprised of a visualization and at least one query.  
+  * A **dashboard** is a set of panels. 
+  * A **data source** is a file, database, or service providing the data.
+  * A **visualization** is a graphical representation of query results.
   
 
 ## Installing Grafana 
 
-Grafana comes in two flavors: Alpine Linux-based and Ubuntu-based. In this tutorial, we will be using the Alpine version, which is recommended by the developers for safety and efficiency.
+Grafana images come in two flavors: Alpine Linux-based and Ubuntu-based. In this tutorial, we will be using the Alpine version, which is recommended for safety and efficiency.
   * Open any kind of terminal and type:
   
   ``` 
@@ -40,12 +40,12 @@ Grafana comes in two flavors: Alpine Linux-based and Ubuntu-based. In this tutor
 ## Logging in
   * Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
   * Log in using **admin/admin** as your login and password.
-  * Change your password when prompted. Type in your new password twice and click **Proceed**.
+  * When prompted, type in your new password and click **Save**.
 
 ## Data source
 After you log in, you will see the Grafana welcome screen.
 
-<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="350"></a>
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" width="500" alt="Welcome screen"></a>
 
 The sidebar on the left is the main means of navigation in Grafana. 
   * In the **Configuration** menu (gear icon), click the **Add Data Source** button. 
@@ -57,15 +57,19 @@ The sidebar on the left is the main means of navigation in Grafana.
 Click **Create a dashboard**.
 This dashboard will contain a single new panel. 
 
-<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/panel.png" height="350"></a>
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/panel.png" width="500" alt="Panel"></a>
 ### Setting up a panel
 #### Add a query
-  * Click the **Add query** button. This will open the query and visualization editor.
-  * In the **Scenario** menu, select **Linear heatmap bucket data**. 
-    >*This scenario will emulate a query returning bucketed data. [Read more about Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/)* 
+  * Click the **Add query** button.
+  
+  <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/editor.png" width="500" alt="Query editor"></a>
+  * In the **Scenario** menu, select **Linear heatmap bucket data**.
+  
+    >*This scenario will emulate a query returning data grouped into intervals.*
+    
   *  Select the time interval used for the X-axis in the drop down menu on the top right. 
     
-As you can see, the default graph visualization does not make much sense for heatmap data.
+Clearly, the default graph visualization does not make a lot of sense for this type of data. Let's visualize it in a more sensible way.
 
 #### Set up visualization
 
@@ -73,12 +77,16 @@ As you can see, the default graph visualization does not make much sense for hea
   * Open the drop-down **Visualization** menu and select **Heatmap**.
   
 ##### Y-axis & Data format
-  * Select *Time series buckets* for the **Format** property. 
+  * Select *Time series buckets* for the **Format** property.
+  
     >*This will render the heatmap correctly, because the generated data has been aggregated into buckets already.*
   * Select *Middle* for the **Bucket bound** property.
-    >*This will give correct labels to buckets.*
     
 ##### Display
   * Switch on **Show legend**.
-  * Optionally, select a different color scheme for your heatmap.
-
+  * Switch on **Show tooltip** and **Histogram**.
+  * You can choose a color scheme for your heatmap, as well as cell visualization options.
+  
+## Further reading
+  * [Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/) 
+  * 

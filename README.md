@@ -2,7 +2,7 @@
 [Grafana](https://grafana.com/) is a powerful tool for data analytics and interactive visualization. It makes exploring and tracking metrics easy, no matter where and how they are stored. 
 
 In this walkthrough, you will get a hands-on start to Grafana. 
-You will create your first dashboard and visualize a mock signal after installing Grafana's latest Docker image.  
+You will create your first dashboard and visualize bucketed heatmap data after installing Grafana's latest Docker image.  
 
 ## Before you start
 ### You will need
@@ -21,18 +21,21 @@ You will create your first dashboard and visualize a mock signal after installin
 ## Installing Grafana 
 
 Grafana comes in two flavors: Alpine Linux-based and Ubuntu-based. In this tutorial, we will be using the Alpine version, which is recommended by the developers for safety and efficiency.
-1. Open any kind of terminal and type:
-```
-docker ps
-```
-to make sure Docker is running. If you see errors, then launch Docker and try again. 
+  * Open any kind of terminal and type:
+  
+  ``` 
+  docker ps 
+  ```
+  
+  to make sure Docker is running. If you see errors, then launch Docker and try again. 
 
-2. Next, type in
-```
-docker run -d -p 3000:3000 grafana/grafana
-```
-to install the latest stable Grafana version.
-> *You may need to use* `sudo` *in front of this command on a Linux system.*
+  * Next, type in
+  
+  ``` 
+  docker run -d -p 3000:3000 grafana/grafana 
+  ```
+  to install the latest stable Grafana version.
+  > *You may need to use* `sudo` *in front of this command on a Linux system.*
 
 ## Logging in
   * Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
@@ -42,31 +45,33 @@ to install the latest stable Grafana version.
 ## Data source
 After you log in, you will see the Grafana welcome screen.
 
-<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="400"></a>
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="350"></a>
 
 The sidebar on the left the main means of navigation in Grafana. 
-  * In the **Configuration** menu (cog icon), click the **Add Data Source** button. 
+  * In the **Configuration** menu (gear icon), click the **Add Data Source** button. 
   * Search for the **TestData DB** data source and select it. 
   * Make sure the **Default** switch is on.
   * Click **Save&Test**.
 
 ## Creating a dashboard
 Click **Create a dashboard**.
-You will see a panel with two buttons.
-(image)
+This dashboard will contain a single new panel. 
+<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/panel.png" height="350"></a>
 ### Setting up a panel
 #### Add a query
-Click the `Add query` button. This will open the query and visualization editor.
-(image)
-By default, you will be presented with a graph visualization of static data.
-In the `Scenario` menu, select `Streaming Client`. This will provide you with mock signal data that updates once each 250 milliseconds.
-
-<a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/top.png"></a>
-  * The time picker menu on the top right contains the time interval displayed. 
-  * The `Speed (ms)` field value indicates how often your data updates.
+  * Click the **Add query** button. This will open the query and visualization editor.
+  * In the **Scenario** menu, select **Linear heatmap bucket data**. 
+    * This scenario will generate ten random series of data that emulate 
+    
+The default graph visualization does not make much sense for heatmap data.
+> The drop-down menu on the top right contains the time interval used for the X-axis. 
+   
 
 #### Set up visualization
-On the left, click the graph icon. This will let you edit your visualization's appearance.
-##### A readable legend
-  * Switch on the `As Table`, `To your right`, `Min`, and `Max` switches in the **Legend** section.
-##### 
+  * On the left, click the graph icon. 
+  * Open the drop-down **Visualization** menu and select **Heatmap**.
+  * In the **Data format** section, select *Time series buckets* for the **Format** property. 
+    * *This will render the heatmap correctly.
+  * In the **Y-axis** section, select *Middle* for the **Bucket bound** property.
+    * This will ...
+

@@ -47,7 +47,7 @@ After you log in, you will see the Grafana welcome screen.
 
 <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/welcome.PNG" height="350"></a>
 
-The sidebar on the left the main means of navigation in Grafana. 
+The sidebar on the left is the main means of navigation in Grafana. 
   * In the **Configuration** menu (gear icon), click the **Add Data Source** button. 
   * Search for the **TestData DB** data source and select it. 
   * Make sure the **Default** switch is on.
@@ -56,22 +56,29 @@ The sidebar on the left the main means of navigation in Grafana.
 ## Creating a dashboard
 Click **Create a dashboard**.
 This dashboard will contain a single new panel. 
+
 <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/panel.png" height="350"></a>
 ### Setting up a panel
 #### Add a query
   * Click the **Add query** button. This will open the query and visualization editor.
   * In the **Scenario** menu, select **Linear heatmap bucket data**. 
-    * This scenario will generate ten random series of data that emulate 
+    >*This scenario will emulate a query returning bucketed data. [Read more about Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/)* 
+  *  Select the time interval used for the X-axis in the drop down menu on the top right. 
     
-The default graph visualization does not make much sense for heatmap data.
-> The drop-down menu on the top right contains the time interval used for the X-axis. 
-   
+As you can see, the default graph visualization does not make much sense for heatmap data.
 
 #### Set up visualization
+
   * On the left, click the graph icon. 
   * Open the drop-down **Visualization** menu and select **Heatmap**.
-  * In the **Data format** section, select *Time series buckets* for the **Format** property. 
-    * *This will render the heatmap correctly.
-  * In the **Y-axis** section, select *Middle* for the **Bucket bound** property.
-    * This will ...
+  
+##### Y-axis & Data format
+  * Select *Time series buckets* for the **Format** property. 
+    >*This will render the heatmap correctly, because the generated data has been aggregated into buckets already.*
+  * Select *Middle* for the **Bucket bound** property.
+    >*This will give correct labels to buckets.*
+    
+##### Display
+  * Switch on **Show legend**.
+  * Optionally, select a different color scheme for your heatmap.
 

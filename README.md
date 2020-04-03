@@ -2,7 +2,7 @@
 [Grafana](https://grafana.com/) is a powerful tool for data analytics and interactive visualization. It makes exploring and tracking metrics easy, no matter where and how they are stored. 
 
 In this walkthrough, you will get a hands-on start to Grafana. 
-You will create your first dashboard and visualize bucketed heatmap data after installing Grafana's latest Docker image.  
+You will create your first dashboard and visualize a heatmap after installing Grafana's latest Docker image.  
 
 ## Before you start
 ### You will need
@@ -88,5 +88,5 @@ Clearly, the default graph visualization does not make a lot of sense for this t
   * You can choose a color scheme for your heatmap, as well as cell visualization options.
   
 ## Further reading
+  * [What is Docker?](https://www.ibm.com/cloud/learn/docker)
   * [Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/) 
-  * 

@@ -58,26 +58,24 @@ Click **Create a dashboard**.
 This dashboard will contain a single new panel. 
 
 <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/panel.png" width="500" alt="Panel"></a>
-### Setting up a panel
-**1. Add a query**
-  * Click the **Add query** button.
+### Create a query
+  * Click the **Add query** button. This will open the Query editor.
   
   <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/editor.png" width="500" alt="Query editor"></a>
+  
   * In the **Scenario** menu, select **Linear heatmap bucket data**.
      * This scenario will emulate a query returning histogram data for evenly spaced time slices. 
   *  Select the displayed time interval in the drop down menu on the top right.
   
  <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/hm_graph.png" width="600"></a>  
-Clearly, the default graph visualization does not make a lot of sense for this type of data. Let's visualize it in a more sensible way.
-***
-**2. Set up visualization**
+Clearly, the graph does not make a lot of sense for this type of data. Let's visualize it in a more sensible way.
+
+### Visualize the data
 
   * On the left, click the graph icon. 
   * Open the drop-down **Visualization** menu and select **Heatmap**.
-  ***
   * **Y Axis & Data format**
-    * Select *Time series buckets* for the **Format** property.
-      + This will render the heatmap correctly, because the generated data has already been aggregated into buckets.
+    * Select *Time series buckets* for the **Format** property. *Needed to render the heatmap correctly because the data has already been aggregated.*
     * Select *Middle* for the **Bucket bound** property.
  * **Display**
     * Switch on **Show legend**.

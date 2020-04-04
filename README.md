@@ -64,29 +64,29 @@ This dashboard will contain a single new panel.
   
   <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/editor.png" width="500" alt="Query editor"></a>
   * In the **Scenario** menu, select **Linear heatmap bucket data**.
+     * This scenario will emulate a query returning histogram data for evenly spaced time slices. 
+  *  Select the displayed time interval in the drop down menu on the top right.
   
-    >*This scenario will emulate a query returning data grouped into intervals.*
-    
-  *  Select the time interval used for the X-axis in the drop down menu on the top right. 
-    
+ <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/hm_graph.png" width="600"></a>  
 Clearly, the default graph visualization does not make a lot of sense for this type of data. Let's visualize it in a more sensible way.
+
 
 #### Set up visualization
 
   * On the left, click the graph icon. 
   * Open the drop-down **Visualization** menu and select **Heatmap**.
   
-##### Y-axis & Data format
-  * Select *Time series buckets* for the **Format** property.
-  
-    >*This will render the heatmap correctly, because the generated data has been aggregated into buckets already.*
-  * Select *Middle* for the **Bucket bound** property.
-    
-##### Display
-  * Switch on **Show legend**.
-  * Switch on **Show tooltip** and **Histogram**.
-  * You can choose a color scheme for your heatmap, as well as cell visualization options.
-  
+  * Y Axis & Data format
+   * Select *Time series buckets* for the **Format** property.
+      + This will render the heatmap correctly, because the generated data has already been aggregated into buckets.
+   * Select *Middle* for the **Bucket bound** property.
+ * Display
+   * Switch on **Show legend**.
+   * Switch on **Show tooltip** and **Histogram**.
+   * If you choose the **spectrum** color mode, the heatmap will be colored with a gradient.
+   * If you choose the **opacity** color mode, the heatmap will be monochrome. Different values will be displayed by different opacity levels. 
+
 ## Further reading
+
   * [What is Docker?](https://www.ibm.com/cloud/learn/docker)
   * [Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/) 

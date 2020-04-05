@@ -38,7 +38,7 @@ Grafana images come in two flavors: Alpine Linux-based and Ubuntu-based. In this
   > *You may need to use* `sudo` *in front of this command on a Linux system.*
 
 ## Logging in
-  * Open a web browser and nagivate to [localhost:3000](http://localhost:3000/). 
+  * Open a web browser and navigate to [localhost:3000](http://localhost:3000/). 
   * Log in using **admin/admin** as your login and password.
   * When prompted, type in your new password and click **Save**.
 

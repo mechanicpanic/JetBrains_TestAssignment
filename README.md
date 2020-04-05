@@ -88,7 +88,7 @@ Clearly, the graph does not make a lot of sense for this type of data. Let's vis
   * Name your dashboard **Test**.
   * Click **Save**.
   
-Congratulations! You have just created your first panel in Grafana. 
+Congratulations! You have just created your first dashboard in Grafana. 
 As a next step, you can organize a set of panels with different scenarios and visualizations on your dashboard. There are also several links below if you have any questions left.
 ## Useful links
   * [What is Docker?](https://www.ibm.com/cloud/learn/docker)

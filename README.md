@@ -67,7 +67,7 @@ This dashboard will contain a single new panel.
      * This scenario will emulate a query returning histogram data for evenly spaced time slices. 
   *  Select the displayed time interval in the drop down menu on the top right.
   
- <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/hm_graph.png" width="600"></a>  
+ <a href="url"><img src="https://github.com/mechanicpanic/JetBrains_TestAssignment/blob/master/hm_graph.png" width="550"></a>  
 Clearly, the graph does not make a lot of sense for this type of data. Let's visualize it in a more sensible way.
 
 ### Visualize the data
@@ -75,15 +75,18 @@ Clearly, the graph does not make a lot of sense for this type of data. Let's vis
   * On the left, click the graph icon. 
   * Open the drop-down **Visualization** menu and select **Heatmap**.
   * **Y Axis & Data format**
-    * Select *Time series buckets* for the **Format** property. *Needed to render the heatmap correctly because the data has already been aggregated.*
+    * Select *Time series buckets* for the **Format** property. (The data in this scenario has already been aggregated. This will render the heatmap correctly.)
     * Select *Middle* for the **Bucket bound** property.
  * **Display**
     * Switch on **Show legend**.
     * Switch on **Show tooltip** and **Histogram**.
     * If you choose the **spectrum** color mode, the heatmap will be colored with a gradient.
     * If you choose the **opacity** color mode, the heatmap will be monochrome. Different values will be displayed by different opacity levels. 
-
-## Further reading
-
+## The end
+Congratulations! You have just created your first panel in Grafana. 
+As a next step, you can organize a set of panels with different scenarios and visualizations on your dashboard. There are also several links below if you have any questions left.
+## Useful links
   * [What is Docker?](https://www.ibm.com/cloud/learn/docker)
   * [Grafana heatmaps](https://grafana.com/docs/grafana/latest/features/panels/heatmap/) 
+  * [Grafana panel features](https://grafana.com/docs/grafana/latest/features/panels/panels/)
+  * [Grafana dashboard features](https://grafana.com/docs/grafana/latest/features/dashboard/dashboards/)

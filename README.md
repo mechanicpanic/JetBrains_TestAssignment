@@ -82,7 +82,12 @@ Clearly, the graph does not make a lot of sense for this type of data. Let's vis
     * Switch on **Show tooltip** and **Histogram**.
     * If you choose the **spectrum** color mode, the heatmap will be colored with a gradient.
     * If you choose the **opacity** color mode, the heatmap will be monochrome. Different values will be displayed by different opacity levels. 
-## The end
+## Name & save your dashboard
+  * Click the return arrow on the top left to open your dashboard again.
+  * Click the save icon on the top right.
+  * Name your dashboard **Test**.
+  * Click **Save**.
+  
 Congratulations! You have just created your first panel in Grafana. 
 As a next step, you can organize a set of panels with different scenarios and visualizations on your dashboard. There are also several links below if you have any questions left.
 ## Useful links
